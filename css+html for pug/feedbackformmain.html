@@ -1,0 +1,63 @@
+<html>
+<head>
+    
+    <title>Feedback!</title>
+<style>
+  body {
+ background-image: linear-gradient(#eee2dc,#edc7b7);
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ 
+  background-size: cover;
+  
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 15px;
+}  
+</style>
+
+</head>
+<body>
+    <div class="container">
+    <h1>We value your feedback!!! </h1><br>
+    <form id="addUserForm" method='post'>
+        How user-friendly was the website? &nbsp
+        <input type="radio" name="friendly" value="5"required="">Excellent &nbsp &nbsp
+        <input type="radio" name="friendly" value="4">Very good &nbsp &nbsp
+        <input type="radio" name="friendly" value="3">Good &nbsp &nbsp
+        <input type="radio" name="friendly" value="2">Fair &nbsp &nbsp
+        <input type="radio" name="friendly" value="1">Could have been better &nbsp &nbsp<br><br>
+
+
+        Did you have access to the necessary information? &nbsp
+        <input type="radio" name="information" value="1" required="">Yes &nbsp &nbsp
+        <input type="radio" name="information" value="0">No &nbsp &nbsp<br><br>
+        
+
+
+        How was the behaviour of the organizer: &nbsp
+        <input type="radio" name="behaviour" value="5" required="">Excellent &nbsp &nbsp
+        <input type="radio" name="behaviour" value="4">Pleasant &nbsp &nbsp
+        <input type="radio" name="behaviour" value="3">Good &nbsp &nbsp
+        <input type="radio" name="behaviour" value="2">Not bad &nbsp &nbsp
+        <input type="radio" name="behaviour" value="1">Rude &nbsp &nbsp<br><br>
+       
+
+        When was the work completed? &nbsp
+        <input type="radio" name="time" value="3" required="">Well in advance &nbsp &nbsp
+        <input type="radio" name="time" value="2"> On time &nbsp &nbsp
+        <input type="radio" name="time" value="1">Late &nbsp &nbsp<br><br>
+
+        Organization of work: &nbsp
+        <input type="radio" name="flow" value="3" required="">Perfect&nbsp &nbsp
+        <input type="radio" name="flow" value="2">Not bad &nbsp &nbsp
+        <input type="radio" name="flow" value="1">Poor &nbsp &nbsp<br><br>
+
+        Additional feedback <br><textarea rows="5" cols="30" name="comment" required=""></textarea>
+        
+       <br><br>
+        <input type="submit" value="Submit" formaction='feedback2'>
+    </form>
+</div>
+</body>
+</html>
+    

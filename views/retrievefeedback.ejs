@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    
+    <ul>
+      <%
+        var list = '';
+        list+= '<style>';
+          list+= 'body{background-image:linear-gradient(#d8c3a5,#ffe0bd );color:#8d8e8a;font-size:1em;font-family:"Comic Sans MS";} ';
+          list+= 'li{padding:4px;color:#e85a4f;font-size:1em;font-family: "Courier New";font-weight:bold;}';
+          list+= '</style>';
+        list+='<h1>Hi admin! Here is the feedback....</h1>'
+        for (i = 0; i < comment.length; i++) {
+          list+='Client id- '+comment[i]._id;
+          list += '<li>Friendly: '+comment[i].friendly+'</li>';
+          list += '<li>Necessary info available: '+comment[i].info+'</li>';
+          list += '<li>Behaviour of organizer: '+comment[i].behaviour+'</li>';
+          list += '<li>Work completed on time: '+comment[i].time+'</li>';
+          list += '<li>Flow of work: '+comment[i].flow+'</li>';
+          list += '<li>Comment: '+comment[i].comment+'</li>';
+          list += '<br>';
+        }
+        return list;
+      %>
+    </ul>
+    <p>this ends here</p>
+  </body>
+</html>

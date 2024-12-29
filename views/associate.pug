@@ -1,0 +1,165 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Association Events
+    link(rel='stylesheet', href='font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Noto+Serif+SC', rel='stylesheet')
+    style.
+      body{
+      background-image:linear-gradient(to bottom, #59253a,#895061);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      /*background-size: cover;*/
+      height: 100%
+      width:100%;
+      }
+      .full{
+      font-family: 'Noto Serif SC', serif;
+      margin:0;
+      /*background-image:url("https://tseaonline.org/wp-content/uploads/2017/01/haslam-addresses-tsea.jpg") ;*/
+      height: 100%;
+      width: 100%;
+      }
+      h1{
+      text-align: center;
+      color:#D7D7D7/*#E6935F*/;
+      background-color:#2d4159;
+      padding: 3px;
+      }
+      td{
+      padding: 7px;
+      font-size: 18px;
+      color: red/*#E3CF5A*/;
+      border-radius: 30%;
+      }
+      .button{
+      background-color:#051783;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 7px 25px;
+      border-radius: 50px;
+      }
+      .button:hover{
+      background-color: #7826AF;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px red;
+      }
+      .Category{
+      color:#D7DF21;
+      }
+      .rad{
+      border-radius: 10px;
+      }
+      .rad:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 10px #EEBE50;
+      }
+      .myCustomTextarea{
+      border-radius: 10px;
+      font-weight: bold;
+      }
+      .myCustomTextarea:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 10px darkgreen;
+      }
+      .text12{
+      border-radius: 100%;
+      }
+    script.
+      function myfun(){
+      console.log("inside fun");
+      var start=document.getElementById("sd").value;
+      var end=document.getElementById("ed").value;
+      var eDate = new Date(end);
+      var sDate = new Date(start);
+      if(start!= '' && end!= '' && sDate> eDate)
+      {
+      alert("Please ensure that the End Date and End Time is greater than or equal to the Start Date and Start Time!");
+      }
+      }
+  body
+    .full
+      h1(align='center')  Association Events Registration Form 
+      form(mehod='post')
+        table(width='100%')
+          tbody
+            tr
+              td.Category Type of the Event
+              td(colspan='2')
+                select(name='toe')
+                  option(value='workshop') Parties
+                  option(value='seminar') Cultural Events
+                  option(value='competetions') Association Meetings
+            tr
+            tr
+            tr
+              td.Category Type of the Area
+              td(colspan='2')
+                select(name='toa')
+                  option(value='hall') Hall
+                  option(value='auditorium') Auditorium
+                  option(value='conference room') Conference Room
+                  option(value='conference room') Open Ground
+            tr
+            tr
+            tr
+              td.Category Start Date & Time
+              td
+                input#sd.rad(type='datetime-local', name='startdatetime', required='true', aria-hidden='true')
+            tr
+            tr
+            tr
+              td.Category End Date & Time
+              td
+                input#ed.rad(type='datetime-local', name='enddatetime', required='true', aria-hidden='true')
+            tr
+            tr
+            tr
+              td.Category Venue Details
+              td
+                textarea.rad(rows='5', cols='26', name='venuedetails')
+            tr
+            tr
+            tr
+              td.Category Budget
+              td
+                input.rad(type='Number', name='budget', required='true', aria-hidden='true', min=500)
+                //
+                  <div class="""slidecontainer">
+                  <input type="range" min="5000" max="100000" value="52500" class="slider" id="myRange">
+                  <p>Value: <span id="demo"></span></p>
+                  </div>
+                  <script>
+                  var slider = document.getElementById("myRange");
+                  var output = document.getElementById("demo");
+                  output.innerHTML = slider.value;
+                  slider.oninput = function() {
+                  output.innerHTML = this.value;
+                  }
+                  </script>
+            tr
+            tr
+            tr
+              td.Category  Number of people
+              td
+                input.rad(type='Number', name='people', required='true', aria-hidden='true', min=1)
+            tr
+            tr
+            tr
+            tr
+            tr
+              td.Category Description
+              td
+                textarea.rad(rows='5', cols='26', name='description')
+            tr
+            tr
+            tr
+              td
+              td
+                input.button(type='submit', name='submit', onclick='myfun()', value='submit', formaction='association_submit')
+              td
+                input.button(type='reset', name='reset', value='reset')

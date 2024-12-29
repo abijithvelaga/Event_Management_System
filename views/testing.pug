@@ -1,0 +1,179 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Educational Events
+    link(rel='stylesheet', href='font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Noto+Serif+SC', rel='stylesheet')
+    script.
+      function myfun(){
+      console.log("inside fun");
+      var start=document.getElementById("sd").value;
+      var end=document.getElementById("ed").value;
+      var eDate = new Date(end);
+      var sDate = new Date(start);
+      if(start!= '' && end!= '' && sDate> eDate)
+      {
+      alert("Please ensure that the End Date and End Time is greater than or equal to the Start Date and Start Time!");
+      console.log("are u exiting");
+
+      }
+      else{
+          console.log("hiiii");
+          document.getElementById("sub").disabled=false;
+          document.getElementById("res").disabled=false;
+
+      }
+      }
+    style.
+      body{
+      font-family: 'Noto Serif SC', serif;
+      margin:0;
+      background-image:radial-gradient(#2c3531,#116466);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: : rgba(255, 255, 255, 0.25)  ;
+      /*background-image:url("http://www.pa-journal.com/news/wp-content/uploads/2017/04/o-EDUCATION-QUOTES-LEARNING-QUOTES-facebook.jpg") ;*/
+      height: 100%;
+      width: 100%;
+      }
+      h1{
+      text-align: center;
+      color:black/*#E6935F*/;
+      background-color:#d1e8e2;
+      }
+      td{
+      padding: 7px;
+      font-size: 18px;
+      color: #d9b08c/*#E3CF5A*/;
+      border-radius: 30%;
+      }
+      .button{
+      background-color: forestgreen;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 7px 25px;
+      border-radius: 50px;
+      }
+      .button:hover{
+      background-color: darkgreen;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px red;
+      }
+      .Category{
+      color:#d9b08c/*#0D0C0C*/;
+      }
+      .rad{
+      border-radius: 10px;
+      }
+      .rad:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 10px darkgreen;
+      }
+      .myCustomTextarea{
+      border-radius: 10px;
+      font-weight: bold;
+      }
+      .myCustomTextarea:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 10px darkgreen;
+      }
+      .text12{
+      border-radius: 100%;
+      }
+  body
+    #image
+    h1(align='center')  Educational Events Registration Form 
+    form(method='post')
+      table(width='100%')
+        tbody
+          tr
+            td.Category Type of the Event
+            td(colspan='2')
+              select(name='toe')
+                option(value='workshop') Workshop
+                option(value='seminar') Seminar
+                option(value='competetions') Competetions
+                option(value='Expo') Expo
+          tr
+          tr
+          tr
+            td.Category Type of the Area
+            td(colspan='2')
+              select(name='toa')
+                option(value='hall') Hall
+                option(value='auditorium') Auditorium
+                option(value='computer lab') Computer Lab
+                option(value='conference room') Conference Room
+          tr
+          tr
+          tr
+            td.Category Start Date & Time
+            td
+              input#sd.rad(type='datetime-local', name='startdatetime', required='true', aria-hidden='true')
+          tr
+          tr
+          tr
+            td.Category End Date & Time
+            td
+              input#ed.rad(type='datetime-local', name='enddatetime', required='true', aria-hidden='true')
+          tr
+          tr
+          tr
+            td.Category Venue Details
+            td
+              textarea.rad(rows='5', cols='26', name='venuedetails')
+          tr
+          tr
+          tr
+            td.Category Budget
+            td
+              input.rad(type='Number', name='budget', required='true', aria-hidden='true')
+              //
+                <div class="""slidecontainer">
+                <input type="range" min="5000" max="100000" value="52500" class="slider" id="myRange">
+                <p>Value: <span id="demo"></span></p>
+                </div>
+                <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                slider.oninput = function() {
+                output.innerHTML = this.value;
+                }
+                </script>
+          tr
+          tr
+          tr
+            td.Category  Number of people
+            td
+              input.rad(type='Number', name='people', required='true', aria-hidden='true', min=0)
+          tr
+          tr
+          tr
+            td.Category Category of the event
+            td
+              input(type='radio', name='Category', value='free')
+              | Free
+            td
+              input(type='radio', name='Category', value='paid')
+              | Paid
+          tr
+          tr
+          tr
+            td.Category Description
+            td
+              textarea.rad(rows='5', cols='26', name='description')
+          tr
+          tr
+          tr
+            td
+            td
+              input#save.button(type='submit', name='submit', onclick='myfun()', value='save')
+            td
+              input#sub.button(type='submit', name='submit', value='payment', formaction='educational_submit', disabled='true')
+            td
+              input#res.button(type='reset', name='reset', value='reset', disabled='true')

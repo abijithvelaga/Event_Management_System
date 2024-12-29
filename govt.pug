@@ -1,0 +1,141 @@
+doctype html
+html
+  head
+    style.
+      body{
+      font-style: italic;
+      font-weight: bold;
+      font-family:'Open Sans Condensed',serif;
+      background-image:url("indiangovt.jpeg");
+      background-repeat: no-repeat;
+      /*background-size: 1030px 600px;*/
+      margin-left:15px;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+      table{
+      margin-left: 50px;
+      margin-top: 20px;
+      }
+      th,td{
+      padding: 50px;
+      font-size: 20px;
+      font-family: 'Bitter', serif;
+      color: #034a6d;
+      }
+      button{
+      background-color: #73B731;
+      border-radius: 2px;
+      border-color: white;
+      padding: 10px;
+      margin-right: : 10px;
+      -webkit-transition-duration: 0.8s;
+      }
+      .button:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s
+      }
+      ul {
+      list-style-type: none;
+      margin-top: -15px;
+      margin-right: -15px;
+      margin-left:-10px;
+      padding: 10px;
+      overflow: hidden;
+      background-color:#f93;
+      }
+      li {
+      float: right;
+      }
+      li a:hover{
+      background-color: aqua;
+      }
+      li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      }
+      .form1{
+      font-family: 'Roboto Mono';
+      text-decoration: none;
+      font-style:normal;
+      color:navy;
+      }
+      input[type=text]:focus {
+      background-color: lightcyan;
+      }
+      textarea:focus {
+      background: lightcyan;
+      }
+      .d{
+      border-radius: 25px;
+      }
+      .fa fa-at{
+      float:right;
+      }
+    link(href='https://fonts.googleapis.com/css?family=Bitter|Lato', rel='stylesheet')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    ul
+      li
+        a.active(href='#home')
+          i.fa.fa-home(style='font-size:24px')
+      li
+        a(href='#contact') Contact Us
+      li
+        a(href='#about') About
+    form
+      .form1
+        table
+          tbody
+            tr
+              td Event name:
+              td(colspan='2')
+                input.d(type='text', name='eventname', required='')
+                br
+                br
+            tr
+              td
+                | Description:
+              td
+                textarea.d(rows='3', cols='50', required='')  
+                br
+                br
+            tr
+              td Number of People:
+              td(colspan='2')
+                input.d(type='Number', name='numpeople', required='')
+                br
+                br
+            tr
+              td
+                | Start date:
+              td
+                input.d(type='datetime-local', data-date-inline-picker='true', required='')
+                br
+                br
+            tr
+              td
+                | End date:
+              td
+                input.d(type='datetime-local', data-date-inline-picker='true', required='')
+                br
+                br
+            tr
+              td
+                | Venue already decided?
+              td
+                input(type='radio', name='venue', value='yes', required='')
+                | Yes
+                input(type='radio', name='venue', value='no')
+                | No
+                br
+                br
+            tr
+              td
+                button(type='submit' , formaction='insert') Submit
+

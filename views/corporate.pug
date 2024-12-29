@@ -1,0 +1,157 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Corporate Events
+    link(rel='stylesheet', href='font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Noto+Serif+SC', rel='stylesheet')
+    script.
+      function myfun(){
+      console.log("inside fun");
+      var start=document.getElementById("sd").value;
+      var end=document.getElementById("ed").value;
+      var eDate = new Date(end);
+      var sDate = new Date(start);
+      if(start!= '' && end!= '' && sDate> eDate)
+      {
+      alert("Please ensure that the End Date and End Time is greater than or equal to the Start Date and Start Time!");
+      }
+      }
+    style.
+      body{
+      font-family: 'Noto Serif SC', serif;
+      margin:0;
+      background-image: linear-gradient(#265077,#022140);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      /*background-size: cover;*/
+      height: 100%
+      width:100%;
+      }
+      .full{
+      font-family: 'Noto Serif SC', serif;
+      margin:0;
+      /*background-image:url("https://tseaonline.org/wp-content/uploads/2017/01/haslam-addresses-tsea.jpg") ;*/
+      height: 100%;
+      width: 100%;
+      }
+      h1{
+      text-align: center;
+      color:#D7D7D7/*#E6935F*/;
+      background-color:#021EAE;
+      padding: 3px;
+      }
+      td{
+      padding: 7px;
+      font-size: 18px;
+      color: red/*#E3CF5A*/;
+      border-radius: 30%;
+      }
+      .button{
+      background-color:#051783;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 7px 25px;
+      border-radius: 50px;
+      }
+      .button:hover{
+      background-color: #000000;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px red;
+      }
+      .Category{
+      color:white;
+      }
+      .rad{
+      border-radius: 10px;
+      }
+      .rad:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 10px #020069;
+      }
+      .myCustomTextarea{
+      border-radius: 10px;
+      font-weight: bold;
+      }
+      .myCustomTextarea:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 10px darkgreen;
+      }
+      .text12{
+      border-radius: 100%;
+      }
+  body
+    .full
+      h1(align='center')  Corporate Events Registration Form 
+      form(method='post')
+        table(width='100%')
+          tbody
+            tr
+              td.Category  Name of the company 
+              td(colspan='2')
+                input.rad(type='text', name='companyname', placeholder='Comapany name')
+            tr
+              td.Category Type of the Event
+              td(colspan='2')
+                select(name='toe')
+                  option(value='meetings') Meetings
+                  option(value='proposal') Business Proposals
+                  option(value='auction') Auctions
+            tr
+            tr
+            tr
+              td.Category Type of the Area
+              td(colspan='2')
+                select(name='toa')
+                  option(value='hall') Hall
+                  option(value='auditorium') Auditorium
+                  option(value='conference room') Conference Room
+            tr
+            tr
+            tr
+              td.Category Start Date & Time
+              td
+                input#sd.rad(type='datetime-local', name='startdatetime', required='true', aria-hidden='true')
+            tr
+            tr
+            tr
+              td.Category End Date & Time
+              td
+                input#ed.rad(type='datetime-local', name='enddatetime', required='true', aria-hidden='true')
+            tr
+            tr
+            tr
+              td.Category Venue Details
+              td
+                textarea.rad(rows='5', cols='26', name='venuedetails', placeholder='Venue Details')
+            tr
+            tr
+            tr
+              td.Category Budget
+              td
+                input.rad(type='Number', name='budget', required='true', aria-hidden='true', placeholder='Budget', min=500)
+            tr
+            tr
+            tr
+              td.Category  Number of people
+              td
+                input.rad(type='Number', name='people', required='true', aria-hidden='true', placeholder='People count', min=1)
+            tr
+            tr
+            tr
+            tr
+            tr
+              td.Category Description
+              td
+                textarea.rad(rows='5', cols='26', name='description', placeholder='Description')
+            tr
+            tr
+            tr
+              td
+              td
+                input.button(type='submit', name='submit', onclick='myfun()', value='submit', formaction='corporate_submit')
+              td
+                input.button(type='reset', name='reset', value='reset')

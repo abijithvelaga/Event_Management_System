@@ -1,0 +1,36 @@
+html
+  head
+  body
+    form(method='post')
+      | City:
+      input#city1(type='text', name='city1')
+      br
+      br
+      |            Venue:
+      input#venue1(type='text', name='venue1')
+      br
+      br
+      |            place:
+      input#place1(type='text', name='place1')
+      br
+      br
+      |            address:
+      input#address1(type='text', name='address1')
+      br
+      br
+      |            capacity:
+      input#capacity1(type='number', name='capacity1')
+      br
+      br
+      |            Description:
+      textarea(name='des')
+      br
+      |            Special features:
+      textarea(name='spl')
+      br
+      input(type='submit', value='submit', formaction='insert')
+      br
+      br
+      input(type='reset', value='reset')
+      br
+      br

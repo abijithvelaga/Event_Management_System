@@ -1,0 +1,74 @@
+html
+  head
+    title Feedback!
+    style.
+      body {
+      background-image: linear-gradient(#eee2dc,#edc7b7);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: 'ZCOOL QingKe HuangYou', cursive;
+      font-size: 15px;
+      }
+  body
+    .container
+      h1 We value your feedback!!! 
+      br
+      form#addUserForm(method='post')
+        | How user-friendly was the website?  
+        input(type='radio', name='friendly', value='5', required='')
+        | Excellent    
+        input(type='radio', name='friendly', value='4')
+        | Very good    
+        input(type='radio', name='friendly', value='3')
+        | Good    
+        input(type='radio', name='friendly', value='2')
+        | Fair    
+        input(type='radio', name='friendly', value='1')
+        | Could have been better    
+        br
+        br
+        |         Did you have access to the necessary information?  
+        input(type='radio', name='information', value='1', required='')
+        | Yes    
+        input(type='radio', name='information', value='0')
+        | No    
+        br
+        br
+        |         How was the behaviour of the organizer:  
+        input(type='radio', name='behaviour', value='5', required='')
+        | Excellent    
+        input(type='radio', name='behaviour', value='4')
+        | Pleasant    
+        input(type='radio', name='behaviour', value='3')
+        | Good    
+        input(type='radio', name='behaviour', value='2')
+        | Not bad    
+        input(type='radio', name='behaviour', value='1')
+        | Rude    
+        br
+        br
+        |         When was the work completed?  
+        input(type='radio', name='time', value='3', required='')
+        | Well in advance    
+        input(type='radio', name='time', value='2')
+        |  On time    
+        input(type='radio', name='time', value='1')
+        | Late    
+        br
+        br
+        |         Organization of work:  
+        input(type='radio', name='flow', value='3', required='')
+        | Perfect   
+        input(type='radio', name='flow', value='2')
+        | Not bad    
+        input(type='radio', name='flow', value='1')
+        | Poor    
+        br
+        br
+        |         Additional feedback 
+        br
+        textarea(rows='5', cols='30', name='comment', required='')
+        br
+        br
+        input(type='submit', value='Submit', formaction='feedback2')

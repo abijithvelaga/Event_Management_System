@@ -1,0 +1,152 @@
+doctype html
+html
+  head
+    link(href='https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Lato|Open+Sans', rel='stylesheet')
+    // *******************************CSS *********************************************
+    style.
+      table{
+      border-collapse: collapse;
+      width: 50%;
+      margin-left: 500px;
+      margin-top:100px;
+      padding-left: 100px;
+      margin-bottom: 100px;
+      }
+      table,th,td{
+      text-align: center;
+      padding: 10px;
+      font-family: 'ZCOOL QingKe HuangYou', cursive;
+      font-size: 25px;
+      }
+      tr:nth-child(even) {background-color: lightgrey;}
+      th{
+      background-color: #0bddb0;
+      color: #3a3d3c;
+      height: 50px;
+      border:1px solid black;
+      }
+      tr:hover {background-color: #C0C0C0;}
+      h1{
+      margin-left:700px;
+      }
+      body{
+      background-image:
+      linear-gradient(to right,#6b6e70,#555759,#3a3b3d,#1d1d1e );
+      }
+      h2{
+      font-size: 40px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      border-bottom: 5px solid #2fa2ef;
+      padding-left:40px;
+      color: #53c1ed;
+      }
+      .topnavbar{
+      overflow: hidden;
+      background-color: #d7dbdd;
+      width: 100%;
+      }
+      .topnavbar a:hover{
+      background-color:#8c8f91;
+      color: black;
+      text-decoration: none;
+      }
+      a{
+      text-decoration: none;
+      font-size: 25px;
+      padding: 10px;
+      color:#1d303d;
+      float: right;
+      }
+      button{
+      background-color:#ba5f51;
+      color:black;
+      font-family: 'ZCOOL QingKe HuangYou', cursive;
+      font-size: 35px;
+      margin-left:50%;
+      padding:10px;
+      }
+      .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%
+      }
+      .sticky + .content {
+      padding-top: 102px;
+      }
+      .header {
+      padding: 10px 16px;
+      background: #555;
+      color: #f1f1f1;
+      }
+      .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%
+      }
+      /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+      .sticky + .content {
+      padding-top: 102px;
+      }
+      /*.main{
+      border-bottom: 2px solid blue;
+      }*/
+      footer{
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      color:white;
+      }
+    // *****************************8Java script**********************************************
+    script.
+      function goBack(){
+      window.history.back();
+      }
+    title
+  body
+    #myHeader.header
+      .topnavbar
+        a(href='#home') Home
+        a(href='#contact') Contact Us
+        a(href='#about') About
+      h1
+        img(src='blank-head-profile-pic-for-a-man.jpg')
+      h2 Vengatesh's Profile
+      .main
+        table
+          tbody
+            tr
+              th Firstname
+              td  Vengatesh
+            tr
+              th LastName
+              td Deen Dayal
+            tr
+              th Email ID
+              td deenu.vengatesh999@gmail.com
+            tr
+              th Phone Number
+              td 9445665785
+            tr
+              th Alternate Phone Number
+              td 7339277705
+            tr
+              th Nationality
+              td Indian
+            tr
+              th Date Of Birth
+              td 28-01-1999
+            tr
+              th Gender
+              td Male
+            tr
+              th Permanent Address
+              td
+            tr
+              th Alternate address
+              td
+      button(onclick='goBack()') Go Back!
+    footer
+      p
+        | All rights reserved | Copyright © 2019,Eventspree | Developed and Maintained by Eventspree

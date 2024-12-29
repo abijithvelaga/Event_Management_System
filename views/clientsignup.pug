@@ -1,0 +1,142 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Online Job Application Form
+    style.
+      body{
+      font-family: "Comic Sans MS",sans-serif;
+      margin:0;
+      background-color: lightgray;
+      background-image: url("http://lakebusinessjournal.com/wp-content/uploads/2017/01/External-Events-banner_2.png");
+      background-size: cover;
+      }
+      h1{
+      text-align: center;
+      background-color: black;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      }
+      h4{
+      text-align: center;
+      background-color: black;
+      color: white;
+      padding: 8px;
+      border-radius: 5px;
+      }
+      h2{
+      background-color: forestgreen;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      }
+      td{
+      padding: 7px;
+      font-size: 20px;
+      border-radius: 10px;
+      color: #16D855;
+      /* BC5449
+      00FDFF
+      DA0B59*/
+      }
+      .radio1{
+      color:#40E0D0;
+      }
+      .rad{
+      border-radius: 8px;
+      }
+      .rad:hover{
+      color:black;
+      }
+      .button{
+      background-color: forestgreen;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 7px 25px;
+      border-radius: 50px;
+      }
+      .button:hover{
+      background-color: darkgreen;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px yellow;
+      }
+  body
+    h1  Client Sign up Form 
+    form(method='post')
+      table(width='100%')
+        tbody
+          tr
+          tr
+          tr
+          tr
+          tr
+            td
+              h4 Personal Details
+          tr
+            td First Name
+            td
+              input.rad(type='text', size='25', required='true', aria-hidden='true', name='fname1')
+            td Last Name
+            td
+              input.rad(type='text', size='25', required='true', name='lname1')
+          tr
+            td Permanent Address
+            td
+              textarea.rad(rows='5', cols='26', name='paddr1')
+            td Alternate Address
+            td
+              textarea.rad(rows='5', cols='26', required='true', name='alt1')
+          tr
+            td
+              | Mobile Number
+            td
+              input.rad(type='Number', size='25', required='true', name='pno1')
+            td Alternate Mobile Number
+            td
+              input.rad(type='Number', name='apno1')
+          tr
+            td Date Of Birth
+            td
+              input.rad(type='Date', required='true', name='dob1')
+          tr
+            td(colspan='3') Select a Gender
+            td.radio1
+              input(type='radio', name='gender1', value='male',)
+              | Male
+            td.radio1(colspan='3')
+              input(type='radio', name='gender1', value='female')
+              | Female
+          tr
+            td Nationalty
+            td
+              select(name='nationality1')
+                option American
+                option Indian
+                option Others
+          tr
+          tr
+          tr
+          tr
+          tr
+            td
+              h4 LogIn Details
+          tr
+            td(colspan='2') Email Id
+            td
+              input.rad(type='Email', name='email1', required='true')
+          tr
+            td(colspan='2') Password(Max 8 Characters)
+            td
+              input.rad(type='password', name='password1', size='8', required='true')
+          tr
+          tr
+          tr
+          tr
+          tr
+            td
+            td(colspan='2')
+              input.button(type='reset', name='reset', value='reset')
+            td
+              input.button(type='submit', name='submit', value='submit', formaction='signupsubmit')

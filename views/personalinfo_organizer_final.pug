@@ -1,0 +1,102 @@
+
+html
+  head
+    link(rel='stylesheet', href='clientpersonalinfo_css.css')
+    link(href='https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet')
+    script(type='text/javascript').
+      function goBack(){
+      window.history.back();
+      }
+    style(type='text/css').
+      table{
+      width: 50%;
+      margin-left: 500px;
+      margin-top:100px;
+      padding-left: 100px;
+      margin-bottom: 100px;
+      }
+      table,th,td{
+      text-align: center;
+      padding: 10px;
+      font-family: 'ZCOOL QingKe HuangYou', cursive;
+      font-size: 25px;
+      border-radius: 10px;
+      }
+      tr:nth-child(even) {background-color:#0C0957;
+      color: white;}
+      tr:nth-child(odd) {background-color:#E7B521;
+      color: white;}
+      th{
+      background-color: #F1E1D1;
+      color: #3a3d3c;
+      height: 50px;
+      /*border:1px solid black;*/
+      }
+      tr:hover {background-color: #C0C0C0;}
+      h1{
+      margin-left:700px;
+      padding-left: 150px;
+      padding-right: 500px;
+      font-size: 30px;
+      }
+      body{
+      background-image:
+      linear-gradient(to right,#6b6e70,#555759,#3a3b3d,#1d1d1e );
+      }
+      h2{
+      font-size: 40px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      border-bottom: 5px solid #2fa2ef;
+      border-width-left:20%;
+      border-width-right:20%;
+      padding-left:40px;
+      color: #53c1ed;
+      }
+      button{
+      background-color: forestgreen;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 7px 25px;
+      border-radius: 50px;
+      margin-left: 50%;
+      margin-top: -70%;
+      }
+    title Client Details
+  body
+    h1(position='center') Personal Details
+    form
+      table
+        tbody
+        each item in result
+          tr
+            th First Name
+            td  #{item.fname}
+          tr
+            th Last Name
+            td #{item.lname}
+          tr
+            th EmailID
+            td #{item.emailid}
+          tr
+            th Phone No.
+            td #{item.contact}
+          tr
+            th Nationality
+            td #{item.country}
+          tr
+            th Date of Birth
+            td #{item.dob}
+          tr
+            th Age
+            td #{item.age}
+          tr
+            th Street
+            td #{item.street}
+          tr
+            th State
+            td #{item.state}
+
+      

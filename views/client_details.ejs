@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/styleodetails.css' />
+  </head>
+  <body>
+    
+    <ul >
+      <%
+        var list = '';
+        list+= '<style>';
+        list+= 'body{background-color:#c96567;color:#97aabd;font-size:1.2em;font-family:"Lucida Sans Typewriter"}';
+        list+= 'li{padding:4px;color:#314455;font-size:1em;font-family: "Courier New"}';
+        list+= '</style>';
+
+        list+='<h2>Hi admin! Here are the details...</h2>'
+        for (i = 0; i < details.length; i++) {
+          list+='Client id- '+details[i].cid;
+          list += '<li>Name: '+details[i].fname+" "+details[i].lname+'</li>';
+          list += '<li>Age: '+details[i].age+'</li>';
+          list += '<li id="contact">Contact number: '+details[i].pno+'</li>'
+          list += '<li>Address: '+details[i].paddr+'</li>';
+          list += '<li>Country: '+details[i].nationality+'</li>';
+          list += '<br>';
+        }
+        
+        return list;
+      %>
+    </ul>
+    <p>this ends here</p>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+doctype html
+html
+  head
+    // <link rel="stylesheet" href="clientpersonalinfo_css.css">
+    link(href='https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Lato|Open+Sans', rel='stylesheet')
+    style.
+      table{
+      border-collapse: collapse;
+      width: 50%;
+      margin-left: 500px;
+      margin-top:100px;
+      padding-left: 100px;
+      margin-bottom: 100px;
+      }
+      table,th,td{
+      text-align: center;
+      padding: 10px;
+      font-family: 'ZCOOL QingKe HuangYou', cursive;
+      font-size: 25px;
+      }
+      tr:nth-child(even) {background-color: lightgrey;}
+      th{
+      background-color: #0bddb0;
+      color: #3a3d3c;
+      height: 50px;
+      border:1px solid black;
+      }
+      tr:hover {background-color: #C0C0C0;}
+      h1{
+      margin-left:700px;
+      }
+      body{
+      background-image:
+      linear-gradient(to right,#6b6e70,#555759,#3a3b3d,#1d1d1e );
+      }
+      h2{
+      font-size: 40px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      border-bottom: 5px solid #2fa2ef;
+      padding-left:40px;
+      color: #53c1ed;
+      }
+      .topnavbar{
+      overflow: hidden;
+      background-color: #d7dbdd;
+      width: 100%;
+      }
+      .topnavbar a:hover{
+      background-color:#8c8f91;
+      color: black;
+      text-decoration: none;
+      }
+      a{
+      text-decoration: none;
+      font-size: 25px;
+      padding: 10px;
+      color:#1d303d;
+      float: right;
+      }
+      button{
+      background-color:#ba5f51;
+      color:black;
+      font-family: 'ZCOOL QingKe HuangYou', cursive;
+      font-size: 35px;
+      margin-left:50%;
+      padding:10px;
+      }
+      .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%
+      }
+      .sticky + .content {
+      padding-top: 102px;
+      }
+      .header {
+      padding: 10px 16px;
+      background: #555;
+      color: #f1f1f1;
+      }
+      .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%
+      }
+      /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+      .sticky + .content {
+      padding-top: 102px;
+      }
+      /*.main{
+      border-bottom: 2px solid blue;
+      }*/
+      footer{
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      color:white;
+      }
+    script.
+      window.onscroll = function() {myFunction()};
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      function myFunction() {
+      if (window.pageYOffset > sticky) {
+      topnavbar.classList.add("sticky");
+      } else {
+      topnavbar.classList.remove("sticky");
+      }
+      }
+      function goBack(){
+      window.history.back();
+      }
+  body
+    form(method='post')
+      #myHeader.header
+        .topnavbar
+          a(href='#home') Home
+          a(href='#contact') Contact Us
+          a(href='#about') About
+        h1
+          img(src='blank-head-profile-pic-for-a-man.jpg')
+        h2 Vengatesh's Profile
+        .main
+          table
+            tbody
+              tr
+                th Firstname
+                td
+                  input(type='text', name='fname1')
+              tr
+                th LastName
+                td
+                  input(type='text', name='lname1')
+              tr
+                th Email ID
+                td
+                  input(type='email', name='email1')
+              tr
+                th Phone Number
+                td
+                  input(type='text', name='pno1')
+              tr
+                th Alternate Phone Number
+                td
+                  input(type='text', name='ano1')
+              tr
+                th Nationality
+                td
+                  input(type='text', name='nationality1')
+              tr
+                th Date Of Birth
+                td
+                  input(type='text', name='dob1')
+              tr
+                th Gender
+                td
+                  input(type='text', name='gender1')
+              tr
+                th Permanent Address
+                td
+                  input(type='text', name='paddress1')
+              tr
+                th Alternate address
+                td
+                  input(type='text', name='altaddr1')
+              tr
+                th Password
+                td
+                  input(type='password', name='password1')
+        button(onclick='goBack()') Go Back!
+        input(type='submit', value='submit', formaction='signupsubmit')
+    footer
+      p
+        | All rights reserved | Copyright © 2019,Eventspree | Developed and Maintained by Eventspree

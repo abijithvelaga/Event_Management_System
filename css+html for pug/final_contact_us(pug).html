@@ -1,0 +1,237 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+  <style type="text/css">
+    .column {
+      float: none;
+      width: 33%;
+      margin-bottom: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .column1 {
+      float: left;
+      width: 60%;
+      margin-bottom: 16px;
+      margin-left: -50%;
+      margin-right: 20%;
+    }
+
+    .column2 {
+      float: right;
+      width: 60%;
+      margin-bottom: 16px;
+      margin-right: -30%;
+    }
+
+    .card {
+      border: 3px solid green;
+      width: 600px;
+      margin-left: 100px;
+      margin-bottom: 100px;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      font-family: "Old English Text MT", sans-serif;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card:hover {
+      cursor: pointer;
+      box-shadow: 5px 5px 15px green;
+    }
+
+    /* Some left and right padding inside the container */
+    .container {
+      padding: 0 16px;
+    }
+
+    /* Clear floats */
+    .container::after,
+    .row1::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .row2 {
+      display: table;
+      width: 50%;
+      padding-left: 25%;
+    }
+
+    .row3 {
+      display: table;
+      width: 50%;
+      padding-left: 25%;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .cimage {
+      padding-left: 20px;
+      width: 100%;
+      height: auto;
+    }
+
+    .title1 {
+      padding-left: 50%;
+      color: #31b0f9;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 50px;
+      border-bottom: 5px solid black;
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+    }
+
+    #footerhead {
+      background-color: darkcyan;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h1 {
+      width: 100%;
+    }
+
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 500px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .bt {
+      margin-left: 40%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cimage">
+    <h1><img src="https://image.rush49.com/web-images/contact-us-banner.jpg" /></h1>
+  </div><br /><br />
+  <h2>
+    <div class="title1" position="center">Our Team</div>
+  </h2>
+  <div class="row1">
+    <div class="column">
+      <div class="card"><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/21462571_1486202271448261_3012801022913796735_n.jpg?_nc_cat=104&amp;_nc_ht=scontent-bom1-1.xx&amp;oh=b36846aa06b0f83b816ee0276c998d66&amp;oe=5D2074FD" alt="vengy" width="100%" />
+        <div class="container">
+          <h2>D Vengatesh</h2>
+          <p class="title">CEO & Founder</p>
+          <p>Developer @EventSpree</p>
+          <p>deenu.vengatesh999@gmail.com</p>
+          <p>Contact Number:9445665785</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="column1">
+      <div class="card"><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/19598828_1654835657921633_6528621189840493662_n.jpg?_nc_cat=109&amp;_nc_ht=scontent-bom1-1.xx&amp;oh=ce5485ca397661da272f46238a1cbff7&amp;oe=5D22295F" alt="Jyothi" style="width:100%;" />
+        <div class="container">
+          <h2>Jyothi Vaidyanathan</h2>
+          <p class="title">Designer</p>
+          <p>Database Designer @Eventspree</p>
+          <p>example@example.com</p>
+          <p>Contact No: 9585038053 </p>
+        </div>
+      </div>
+    </div>
+    <div class="column2">
+      <div class="card"><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/14947873_206598533101261_6618055476385135688_n.jpg?_nc_cat=101&amp;_nc_ht=scontent-bom1-1.xx&amp;oh=f46d2aced4b723b5f936b379fa2d8b4f&amp;oe=5D22F433" alt="Velaga" style="width:100%;" />
+        <div class="container">
+          <h2>Abijith Velaga</h2>
+          <p class="title">Designer</p>
+          <p>GUI Designer & Developer @EventSpree</p>
+          <p>abijithvelaga@gmail.com</p>
+          <p>Contact No: 9494530909 </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row3">
+    <div class="column1">
+      <div class="card"><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/20767725_213452272521003_4198322732429003803_n.jpg?_nc_cat=110&amp;_nc_ht=scontent-bom1-1.xx&amp;oh=138840061a4dd9cde37f0c9286967c1a&amp;oe=5CDCA65F" alt="Ragul" style="width:100%;" />
+        <div class="container">
+          <h2>KV Ragul</h2>
+          <p class="title">Designer</p>
+          <p>Testing Engineer @EventSpree</p>
+          <p>example@example.com</p>
+          <p>Contact No: 9445543300</p>
+        </div>
+      </div>
+    </div>
+    <div class="column2">
+      <div class="card"><img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/20728043_1173480672783639_3679756277222234112_n.jpg?_nc_cat=111&amp;_nc_ht=scontent-bom1-1.xx&amp;oh=e294216057471314f7cd2ead6a0b5d20&amp;oe=5D237FA9" alt="pawan" style="width:100%;" height="63%" />
+        <div class="container">
+          <h2>Pawan Kumar</h2>
+          <p class="title">Designer</p>
+          <p>Testing Engineer @EventSpree</p>
+          <p>example@example.com</p>
+          <p>Contact No: 7538882664</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bt">
+    <button class="button" style="vertical-align:middle;" formaction="querypage"><span>Send Your Query </span></button>
+  </div>
+  <div id="footer">
+    <h2 id="footerhead">Copyright © 2018 , Event Spree</h2>
+    <p align="center">All Rights Reserved</p>
+    <p align="center">Developed & Maintained by Our Team</p>
+  </div>
+  <div align="center"><a href="#Home">Home</a>|<a href="#CEO">CEO & Founder</a>|<a href="#Database">Database Designer</a>|<a href="#GUI">GUI Designer & Developer</a>|<a href="#Testing">Testing Engineer</a>|<a href="#report">Report</a></div><br />
+</body>
+
+</html>

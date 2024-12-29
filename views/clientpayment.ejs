@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="/stylesheets/clientaccount.css">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Acme|Bitter|Lato" rel="stylesheet">
+     <script>
+     function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+function credit(){
+  console.log("hi");
+  document.location.href='/home/vineet/Desktop/softwareproject/studio code/views/creditdebit.ejs';
+}
+     </script>
+	</head>
+	<body>
+		
+ 
+  <div class="topnav-right">
+  	 <a  href="#home">Home</a>
+  <a href="#contact">Contact</a>
+    <a href="#Logout" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+  </div>
+  <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <button onclick='credit'>Credit Card</button>
+  <button onclick='debit'>Debit Card</button>
+  <a href="creditdebit.html">Credit Card</a>
+  <a href="creditdebit.html">Debit Card</a>
+  <a href="#">Google Pay</a>
+  <a href="#">Paytm</a>
+  <a href="#">Phone Pe</a>
+
+ 
+</div>
+
+<button class="openbtn" onclick="openNav()">&#9776;Mode of payment</button> 
+
+
+	</body>
+</html>

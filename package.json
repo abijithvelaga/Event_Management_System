@@ -1,0 +1,16 @@
+{
+  "name": "studio-code",
+  "version": "1.0.0",
+  "main": "clientmain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "alert-node": "^1.2.3",
+    "date-time": "^3.0.0",
+    "popups": "^1.1.3"
+  }
+}

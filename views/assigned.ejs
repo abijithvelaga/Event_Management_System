@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    
+    <ul>
+      <%
+        var list = '';
+        list+='<style>';
+        list+='body{padding:10px;background-color:#314455;color:white;font-size:25px;}';
+        list+='li{padding:8px;font-family:"Georgia";font-size:15px;color:#white}';
+        list+='</style>';      
+        list+='<h1>List of events registered!</h1>'
+        for (i = 0; i < events.length; i++) {
+          
+          list += 'Event id: '+events[i].eid;
+          list += '<li>Client id: '+events[i].cid+'</li>';
+          list += '<li>Organizer id: '+events[i].oid+'</li>';
+          list += '<li>Type of event: '+events[i].type+'</li>';
+          list += '<li>Name of the event: '+events[i].name+'</li>';
+          list += '<li>Description: '+events[i].description+'</li>';
+          list += '<li>Venue: '+events[i].venue+'</li>';
+          list += '<br>';
+        }
+        return list;
+      %>
+    </ul>
+    <p>this ends here</p>
+  </body>
+</html>

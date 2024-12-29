@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Government Event</title>
+	<link rel="stylesheet" href="font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    
+     function myfun(){
+      console.log("inside fun");
+   var start=document.getElementById("sd").value;
+   var end=document.getElementById("ed").value;
+   var eDate = new Date(end);
+  var sDate = new Date(start);
+  
+  if(start!= '' && end!= '' && sDate> eDate)
+    {
+    alert("Please ensure that the End Date and End Time is greater than or equal to the Start Date and Start Time!");
+    
+    }
+
+    }
+  </script>
+  
+	
+<style>
+body{
+			 font-family: 'Noto Serif SC', serif;
+
+    		margin:0;
+    		background-image:linear-gradient(#8fc1e3,#5085a5,#31708e);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: : rgba(255, 255, 255, 0.25)  ;
+        /*background-image:url("http://www.pa-journal.com/news/wp-content/uploads/2017/04/o-EDUCATION-QUOTES-LEARNING-QUOTES-facebook.jpg") ;*/
+        height: 100%;
+        width: 100%;
+}
+h1{
+    		text-align: center;
+        color:black/*#E6935F*/;
+        background-color:#d1e8e2;
+
+    	}
+    	
+    	td{
+    		padding: 7px;
+    		font-size: 18px; 
+    		color: black;
+    		border-radius: 30%;
+    		   	}
+    		  
+
+        .button{
+            background-color: forestgreen;
+            color: white;
+            border: none;
+            font-size: 20px;
+            padding: 7px 25px;
+            border-radius: 50px;
+        }
+
+        .button:hover{
+            background-color: darkgreen;
+            cursor: pointer;
+            box-shadow: 5px 5px 10px red;
+        }
+        .Category{
+        	color:black;
+          
+        }
+        .rad{
+          border-radius: 10px;
+        }
+        .rad:hover{
+
+            cursor: pointer;
+            box-shadow: 5px 5px 10px darkgreen;
+        }
+        .myCustomTextarea{
+          border-radius: 10px;
+          font-weight: bold;
+        }
+        .myCustomTextarea:hover{
+          cursor: pointer;
+            box-shadow: 5px 5px 10px darkgreen;
+        }
+        .text12{
+          border-radius: 100%;
+        }
+       
+
+</style>
+</head>
+<body>
+  <div id="image"></div>
+	<h1 align="center"> Government Events Registration Form </h1>
+	<form>
+		<table width="100%">
+			<tr>
+				<td class="Category">Type of the Event</td>
+				<td colspan="2">
+					<select name="toe">
+		          <option value="workshop">Workshop</option>
+   		        <option value="seminar">Seminar</option>
+  		        <option value="competetions">Competetions</option>
+  		        <option value="Expo">Expo</option>
+					</select>
+				</td>
+			</tr>
+			<tr></tr>
+      <tr></tr>
+			<tr>
+				<td class="Category">Type of the Area</td>
+				<td colspan="2">
+					<select name="toa" >
+		<option value="hall">Hall</option>
+   		<option value="auditorium">Auditorium</option>
+  		<option value="computer lab">Computer Lab</option>
+  		<option value="conference room">Conference Room</option>
+					</select>
+				</td>
+			</tr>
+			<tr></tr>
+      <tr></tr>
+      <tr>
+        <td class="Category">Start Date & Time</td>
+        <td>
+          <input type="datetime-local" name="startdatetime" id="sd" required="true" aria-hidden="true" class="rad" >
+        </td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr>
+        <td class="Category">End Date & Time</td>
+        <td>
+          <input type="datetime-local" name="enddatetime" id="ed"required="true" aria-hidden="true" class="rad" >
+        </td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr>
+        <td class="Category">Venue Details</td>       
+          <td>
+                <textarea rows="5" cols="26" class="rad" name="venuedetails"></textarea>
+                </td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr>
+        <td>
+          Choose File:
+        </td>
+        <td>
+          <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input" id="customFile" name="filename">
+      <label class="custom-file-label" for="customFile">Choose file</label>
+    </div>
+    <script>
+      $(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+    </script>
+        </td>
+      </tr>
+			<tr>
+				<td class="Category">Budget</td>
+				<td>
+            <input type="Number" name="budget" required="true" aria-hidden="true" class="rad">
+
+					<!--<div class="""slidecontainer">
+  <input type="range" min="5000" max="100000" value="52500" class="slider" id="myRange">
+  <p>Value: <span id="demo"></span></p>
+</div>
+					<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>-->
+				</td>
+			</tr>
+		   <tr></tr>
+       <tr></tr>
+				<tr>
+					<td class="Category"> Number of people</td>
+					<td>
+						<input type="Number" name="people" required="true" aria-hidden="true" class="rad">
+					</td>
+				</tr>
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+        <tr></tr>
+        <tr>
+        <td class="Category">Description</td>       
+          <td>
+                <textarea rows="5" cols="26" class="rad" name="description"></textarea>
+                </td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" name="submit" onclick="myfun()" value="submit" class="button">
+					</td>
+					<td>
+						<input type="reset" name="reset" value="reset" class="button">
+					</td>
+				</tr>
+				
+		</table>
+	</form>
+	
+</body>

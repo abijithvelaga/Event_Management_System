@@ -1,0 +1,189 @@
+html
+  head
+    link(rel='stylesheet', href='contactus_css.css')
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro', rel='stylesheet')
+    style(type='text/css').
+      body{
+      background-color: lightgray;
+      }
+      .column {
+      float: none;
+      width: 33%;
+      margin-bottom: 16px;
+      margin-left: auto;
+      margin-right:auto;
+      }
+      .column1 {
+      float: left;
+      width: 60%;
+      margin-bottom: 16px;
+      margin-left:-50%;
+      margin-right: 20%;
+      }
+      .column2 {
+      float: right;
+      width: 60%;
+      margin-bottom: 16px;
+      margin-right: -30%;
+      }
+      .card {
+      border: 3px solid green;
+      width: 600px;
+      margin-left: 100px;
+      margin-bottom: 100px;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      font-family: "Old English Text MT",sans-serif;
+      }
+      .card img{
+      width: 100%;
+      border-radius: 10px;
+      }
+      .card:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 15px green;
+      }
+      /* Some left and right padding inside the container */
+      .container {
+      padding: 0 16px;
+      }
+      /* Clear floats */
+      .container::after, .row1::after {
+      content: "";
+      clear: both;
+      display: table;
+      }
+      .row2{
+      display:table;
+      width: 50%;
+      padding-left: 25%;
+      }
+      .row3{
+      display:table;
+      width: 50%;
+      padding-left: 25%;
+      }
+      .title {
+      color: grey;
+      }
+      .cimage{
+      padding-left:20px;
+      width: 100%;
+      height:auto;
+      }
+      .title1{
+      padding-left: 50%;
+      color:#31b0f9 ;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 50px;
+      border-bottom: 5px solid black;
+      }
+      .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      }
+      #footerhead{
+      background-color: darkcyan;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      }
+      h1{
+      width: 100%;
+      }
+      #contact{
+      color:white;
+      margin: 0 43%;
+      text-decoration: none;
+      font-family: Arial,sans-serif;
+      background-color:#333333;
+      border: none;
+      font-size:18px;
+      padding: 14px 30px;
+      border-radius: 5px;
+      }
+      #contact:hover{
+      background-color:white;
+      color: black;
+      }
+  body
+    form(method='post')
+      .cimage
+        h1
+          img(src='https://image.rush49.com/web-images/contact-us-banner.jpg')
+      br
+      br
+      h2
+        .title1(position='center')
+          | Our Team
+      .row1
+        .column
+          .card
+            img(src='https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/21462571_1486202271448261_3012801022913796735_n.jpg?_nc_cat=104&_nc_ht=scontent-bom1-1.xx&oh=b36846aa06b0f83b816ee0276c998d66&oe=5D2074FD', alt='vengy', width='100%')
+            .container
+              h2 D Vengatesh
+              p.title CEO & Founder
+              p Developer @EventSpree
+              p deenu.vengatesh999@gmail.com
+              p Contact Number:9445665785
+      .row2
+        .column1
+          .card
+            img(src='https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/19598828_1654835657921633_6528621189840493662_n.jpg?_nc_cat=109&_nc_ht=scontent-bom1-1.xx&oh=ce5485ca397661da272f46238a1cbff7&oe=5D22295F', alt='Jyothi', style='width:100%')
+            .container
+              h2 Jyothi Vaidyanathan
+              p.title Designer
+              p Database Designer @Eventspree
+              p jyothi7917@gmail.com
+              p Contact No: 9585038053 
+        .column2
+          .card
+            img(src='https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/14947873_206598533101261_6618055476385135688_n.jpg?_nc_cat=101&_nc_ht=scontent-bom1-1.xx&oh=f46d2aced4b723b5f936b379fa2d8b4f&oe=5D22F433', alt='Velaga', style='width:100%')
+            .container
+              h2 Abijith Velaga
+              p.title Designer
+              p GUI Designer & Developer @EventSpree
+              p abijithvelaga@gmail.com
+              p Contact No: 9494530909 
+      .row3
+        .column1
+          .card
+            img(src='https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/20767725_213452272521003_4198322732429003803_n.jpg?_nc_cat=110&_nc_ht=scontent-bom1-1.xx&oh=138840061a4dd9cde37f0c9286967c1a&oe=5CDCA65F', alt='Ragul', style='width:100%')
+            .container
+              h2 KV Ragul
+              p.title Designer
+              p Testing Engineer @EventSpree
+              p kvragul1999@gmail.com
+              p Contact No: 9445543300
+        .column2
+          .card
+            img(src='https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/20728043_1173480672783639_3679756277222234112_n.jpg?_nc_cat=111&_nc_ht=scontent-bom1-1.xx&oh=e294216057471314f7cd2ead6a0b5d20&oe=5D237FA9', alt='pawan', style='width:100%', height='63%')
+            .container
+              h2 Pawan Kumar
+              p.title Designer
+              p Testing Engineer @EventSpree
+              p pawankumar@gmail.com
+              p Contact No: 7538882664
+      button#contact(formaction='contactus2')  Connect With US!! 
+      #footer
+        h2#footerhead Copyright © 2018 , Event Spree
+        p(align='center') All Rights Reserved
+        p(align='center') Developed & Maintained by Our Team
+      div(align='center')
+        a(href='#Home') Home
+        | |
+        a(href='#CEO') CEO & Founder
+        | |
+        a(href='#Database') Database Designer
+        | |
+        a(href='#GUI') GUI Designer & Developer
+        | |
+        a(href='#Testing') Testing Engineer
+        | |
+        a(href='#report') Report
+      br
+

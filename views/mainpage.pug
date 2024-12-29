@@ -1,0 +1,146 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
+    meta(charset='utf-8')
+    style.
+      body {
+      /*font-family: Arial, Helvetica, sans-serif;*/
+      font-family: 'Montserrat', sans-serif;
+      }
+      * {
+      box-sizing: border-box;
+      }
+      /* Style inputs */
+      input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      }
+      input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      }
+      input[type=submit]:hover {
+      background-color: #45a049;
+      }
+      /* Style the container/contact section */
+      .container {
+      border-radius: 5px;
+      background-image:linear-gradient(orange,black,white);
+      /*background-color: black/*#f2f2f2*/
+      background-attachment: fixed;
+      height: 100%;
+      padding: 10px;
+      }
+      body{
+      background-image:linear-gradient(black,white,orange);
+      }
+      /* Create two columns that float next to eachother */
+      .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+      }
+      /* Clear floats after the columns */
+      .row:after {
+      content: "";
+      display: table;
+      clear: both;
+      }
+      #content{
+      font-size: 30px;
+      font-weight: 500;
+      font-style: oblique;
+      width: 75%;
+      color: lightgray;
+      }
+      #client{
+      padding: 18px;
+      width: 50%;
+      margin-left: 70px;
+      margin-top: 30px;
+      border-radius: 10px;
+      font-size: 20px;
+      transition: width 2s;
+      }
+      #client:hover{
+      background-color: lightgray;
+      border-radius: 20px;
+      color: black;
+      width: 250px;
+      }
+      #organiser{
+      padding: 18px;
+      width: 50%;
+      margin-left: 70px;
+      border-radius: 10px;
+      margin-top: 40px;
+      font-size: 20px;
+      transition: width 2s;
+      }
+      #organiser:hover{
+      background-color: lightgray;
+      border-radius: 20px;
+      color: black;
+      width: 250px;
+      }
+      #admin{
+      padding: 18px;
+      width: 50%;
+      margin-left: 70px;
+      border-radius: 10px;
+      margin-top: 40px;
+      font-size: 20px;
+      transition: width 2s;
+      }
+      #admin:hover{
+      background-color: lightgray;
+      border-radius: 20px;
+      color: black;
+      width: 250px;
+      }
+      h1{
+      color:black;
+      font-size: 35px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      }
+      p{
+      color: lightgray;
+      }
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+      }
+      }
+  body
+    .container
+      div(style='text-align:center')
+        h1   EVENT SPREE  
+        p Swing by for a cup of coffee, or leave us a message:
+      .row
+        .column
+          img(src='https://www.sarkariexam.com/wp-content/uploads/2011/12/Amrita-University-Logo.png', style='width:80% height:60%')
+        .column
+          form(method='post')
+            p#content
+              | Eventspree - A perfect way to conduct events.
+              br
+              br
+              |          Welcome to EventSpree!! Organizing events is just a few clicks away! Eventspree helps you to conduct events at ease. Leave your papers and pens at rest and Eventspree will do the job for you!! Play a game while wewe take care of your events.
+            input#client.btn.btn-sm.animated-button.thar-one(type='submit', value=' Client Login ', name='client_name', formaction='clientpage')
+            br
+            input#organiser(type='submit', value=' Organiser Login ', name='organiser_name', formaction='organizerpage')
+            br
+            input#admin(type='submit', value=' Admin Login ', name='admin_name', formaction='adminpage')

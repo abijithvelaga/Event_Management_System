@@ -1,0 +1,81 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Home Page 
+    style.
+      body{
+      font-family: "Comic Sans MS", sans-serif;
+      margin: 0;
+      }
+      h1{
+      text-align: center;
+      color: black;
+      background-color:darkgreen;
+      padding:6px;
+      }
+      #board{
+      float:right;
+      color:black;
+      text-decoration: none;
+      font-family: Arial,sans-serif;
+      background-color: darkgreen;
+      border: none;
+      font-size: 18px;
+      padding: 14px 55px;
+      }
+      #board:hover{
+      background-color: lightgray;
+      border-radius: 5px;
+      }
+      .image{
+      border: 2px solid green;
+      width: 500px;
+      float: left;
+      margin: 5px;
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      }
+      .image img{
+      width: 100%;
+      border-radius: 8px;
+      /* to adjust the height automaticlly*/
+      }
+      .desc{
+      padding: 10px;
+      }
+      .image:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 15px green;
+      }
+  body
+    form(method='post')
+      div
+        h1
+          | HOME PAGE
+          button#board.btn.success(formaction='redirect_to_clientpage') Dash Board 
+        .image
+          button(formaction='form',name='ren', value='edu')
+            img(src='http://www.aithihasikaevents.com/wp-content/uploads/2017/06/educatinal-events.jpg', width='350px', height='400px')
+          .desc Educational Event
+        .image
+          button(formaction='form',name='ren', value='gov')
+            img(src='https://teamorange.in/wp-content/uploads/2017/02/event-management-blog-government-pr.jpg', width='350px', height='400px')
+          .desc Government Event 
+        .image
+          button(formaction='form',name='ren', value='cor')
+            img(src='https://marketconcepts.co.in/blog/wp-content/uploads/2017/07/Corporate-Event-Photography.jpg', width='350px', height='400px')
+          .desc Corporate Event
+        .image
+          button(formaction='form',name='ren', value='fam')
+            img(src='http://www.awptg.org/files/2019/02/FamilyFunEvent-logo_1.jpg', width='600', height='400px')
+          .desc Family Event
+        .image
+          button(formaction='form',name='ren', value='pro')
+            img(src='http://fuse-events.us/wp-content/uploads/2015/03/Fotolia_77538058_Subscription_Yearly_M-1030x658.jpg', width='600px', height='400px')
+          .desc Non Profitable Event
+        .image
+          button(formaction='form',name='ren', value='aso')
+            img(src='https://assets.entrepreneur.com/content/3x2/2000/20170605123612-BNC-0948.jpeg?width=700&crop=2:1', width='600', height='400px')
+          .desc Associate Event 
